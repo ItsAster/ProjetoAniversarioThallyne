@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Imagens com Linhas Separadoras</title>
+    <style>
+        .password-field {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: end;
+            margin-left: 10px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            color: black;
+            border: 5px solid black;
+        }
+
+        .verify-button {
+            background-color: #9841a3;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: "Amatic SC", cursive;
+        }
+
+        .verify-button:hover {
+            background-color: #45a049;
+        }
+
+        .password-field input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            border: 5px solid black;
+            align-items: end;
+
+        }
+
+        .centered-text {
+            text-align: center;
+            border-radius: 10px;
+            font-family: "Amatic SC", cursive;
+        }
+
+        .image-separator {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        body {
+            background-image: url("imagem5.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 500px;
+            width: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centered-text">
+        <h1>PARABÉNS MINHA GATINHAAA <br>
+            &hearts; </h1>
+
+    </div>
+
+    <div class="password-field">
+        <label for="password1">
+            <img src="imagem1.png" alt="Imagem 1">
+        </label>
+        <input type="password" id="password1" />
+    </div>
+    <div class="image-separator"></div>
+
+    <div class="password-field">
+        <label for="password2">
+            <img src="imagem2.png" alt="Imagem 2">
+        </label>
+        <input type="password" id="password2" />
+    </div>
+    <div class="image-separator"></div>
+
+    <div class="password-field">
+        <label for="password3">
+            <img src="imagem3.png" alt="Imagem 3">
+        </label>
+        <input type="password" id="password3" />
+    </div>
+    <div class="image-separator"></div>
+
+    <div class="password-field">
+        <label for="password4">
+            <img src="imagem4.png" alt="Imagem 4">
+        </label>
+        <input type="password" id="password4" />
+    </div>
+    <div class="image-separator"></div>
+
+    <button class="verify-button" onclick="verificarSenha()">Verificar Senha</button>
+
+    <video class="video" id="video" style="display: none;" width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        function verificarSenha() {
+            var senha1 = document.getElementById("password1").value;
+            var senha2 = document.getElementById("password2").value;
+            var senha3 = document.getElementById("password3").value;
+            var senha4 = document.getElementById("password4").value;
+
+            if (senha1 === "33" && senha2 === "114" && senha3 === "8" && senha4 === "10") {
+                document.getElementById("video").style.display = "block";
+            } else {
+                alert("Senha incorreta! Tente novamente.");
+            }
+        }
+    </script>
+</body>
+
+</html>
